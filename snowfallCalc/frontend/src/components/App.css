@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  min-height: 100vh; /* Ensure the container covers at least the full viewport height */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+input {
+  margin: 5px;
+  padding: 5px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+
+
+/* New styles for background image and table */
+
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-image: url('./assets/skierBackground.webp'); /* Ensure the path is correct */
+  background-size: cover; /* Cover the entire viewport */
+  background-repeat: no-repeat; /* Prevent repeating */
+  background-position: center; /* Center the image */
+  
+  background-attachment: fixed
+  
+  
+
+}
+
+
+
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+table {
+  width: 50%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Add background to the table for readability */
+  color: black; /* Change text color back to black for readability */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
