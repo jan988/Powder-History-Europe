@@ -4,7 +4,7 @@ import './App.css';
 
 import backgroundImage from './assets/skierBackground.webp';
 
-
+const apiUrl = 'https://powder-history-europe-backend.onrender.com';
 
 const App = () => {
   const [startDate, setStartDate] = useState('');
@@ -16,7 +16,7 @@ const App = () => {
 
   const fetchAverageSnowfall = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/average_snowfall', {
+      const response = await axios.get('${apiUrl}/average_snowfall', {
         params: {
           start_date: startDate,
           end_date: endDate,
