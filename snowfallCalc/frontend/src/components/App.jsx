@@ -12,6 +12,8 @@ const App = () => {
   const [locations, setLocations] = useState([]);
   const [averageSnowfall, setAverageSnowfall] = useState(null);
 
+  const [infoVisible, setInfoVisible] = useState(true); // Added state variable
+
   const fetchAverageSnowfall = async () => {
     try {
       const response = await axios.get('http://localhost:5000/average_snowfall', {
@@ -22,6 +24,9 @@ const App = () => {
         }
       });
       setAverageSnowfall(response.data);
+
+      setInfoVisible(false); // Hide info box on button click
+
     } catch (error) {
       console.error("There was an error fetching the average snowfall!", error);
     }
@@ -42,6 +47,16 @@ const App = () => {
       />
       
       <button onClick={fetchAverageSnowfall}>Get Average Snowfall</button>
+
+
+      {infoVisible && ( // Conditionally render the info box
+        <div className="info-box">
+          <p>This website calculates the average snowfall for a selected period considering the last 80 years. It ignores the specific year.</p>
+        </div>
+      )}
+
+
+
       {averageSnowfall && (
         <>
           <h2>Average Snowfall</h2>
