@@ -16,7 +16,7 @@ const App = () => {
 
   const fetchAverageSnowfall = async () => {
     try {
-      const response = await axios.get('${apiUrl}/average_snowfall', {
+      const response = await axios.get(`${apiUrl}/average_snowfall`, {
         params: {
           start_date: startDate,
           end_date: endDate,
