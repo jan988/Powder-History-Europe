@@ -1,4 +1,4 @@
 # Ignore virtual environment directories
 venv/
-new_venv/
+snowfallCalc/backend/new_venv/
 .env/
